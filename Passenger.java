@@ -1,10 +1,15 @@
 /**
  * Passanger represents a person that rides a train.
+ * They can board or leave the train cars.
  */
 public class Passenger implements PassengerRequirements {
-    
+    /** Passanger name */
     private String name;
 
+    /**
+     * Constructs Passanger with a given name.
+     * @param name
+     */
     public Passenger(String name) {
         this.name = name;
     }
@@ -18,7 +23,7 @@ public class Passenger implements PassengerRequirements {
     }
 
     /**
-     * If space exists, board a car.
+     * If space exists, attempts to board a specified car.
      */
     public void boardCar(Car c) {
         if (!c.addPassenger(this)) {
@@ -27,7 +32,7 @@ public class Passenger implements PassengerRequirements {
     }
 
     /**
-     * Passanger leaves a car.
+     * Passanger leaves a specified car.
      */
     public void getOffCar(Car c) {
         if (!c.removePassenger(this)) {

@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 
 /**
- * Train ties both Engine and Cars togetehr/
+ * Train ties both Engine and Cars together and manages total passenger capacity and manifests./
  */
 public class Train implements TrainRequirements {
+    /** Engine that powers the train */
     private Engine engine;
+    /** Collection of attached cars */
     private ArrayList<Car> cars;
 
     /**
@@ -24,10 +26,12 @@ public class Train implements TrainRequirements {
         }
     }
 
+    /** Return's a train's engine */
     public Engine getEngine() {
         return engine;
     }
 
+    /** Returns a specific (y i) car */
     public Car getCar(int i) {
         return cars.get(i);
     }
